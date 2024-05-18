@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheNewsHive</title>
+    
+    <style>
+        body{
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        .header{
+            background-color: black;
+            color: white;
+            padding: 2px;
+        }
+        .links{
+            padding: 1px;
+            margin-left: 50px;
+            color: black;
+            border-color: white;
+        }
+        .header2{
+            width: 100%;
+            height: 15%;
+            background-color: gray;
+        }
+        .blogs {
+            display: flex;
+        }
+        .blogs .woman img {
+            width: 370px;
+            height: 400px;    
+        }
+        .blogs .woman .btn {
+            position: absolute;
+            top: 80%;
+            left: 6%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 11px;
+            padding: 4px 5px;
+            border-radius: 15px;
+        }
+        .woman .btn:hover {
+            background-color: black;
+        }
+        .womantxt{
+            position: absolute;
+            bottom: 1px;
+            left: 10px;
+            color: white;
+            font-size: 16px;
+            padding: 7px;
+        
+        }
+        .woman .btn2 {
+            position: absolute;
+            top: 80%;
+            left: 11%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 11px;
+            padding: 4px 4px;
+            border-radius: 15px;
+        }
+        .woman .btn2:hover {
+            background-color: black;
+        }
+        /*Vaulted Cellar*/
+        .vaulted{
+            margin-left: 1.8%;
+        }
+        .blogs .vaulted img{
+            width: 200px;
+            height: 400px;
+        }
+        .txt2{
+            position: absolute;
+            bottom: 0.01px;
+            left: 430px;
+            color: white;
+            font-size: 16px;
+            padding: 7px;
+        
+        }
+        .vaulted .btn3 {
+            position: absolute;
+            top: 74%;
+            left: 37%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 9px;
+            padding: 4px 1px;
+            border-radius: 15px;
+        }
+        .vaulted .btn3:hover {
+            background-color: black;
+        }
+        .vaulted .btn4 {
+            position: absolute;
+            top: 74%;
+            left: 41%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 9px;
+            padding: 4px 1px;
+            border-radius: 15px;
+        }
+        .vaulted .btn4:hover {
+            background-color: black;
+        }
+        /* national gallery*/
+        .gallery{
+            margin-left: 1.8%;
+        }
+        .gallery img{
+            width: 200px;
+            height: 200px;
+
+        }
+        .galtxt{
+            position: absolute;
+            bottom: 150px;
+            left: 659px;
+            color: white;
+            font-size: 18px;
+            padding: 7px;
+        
+        }
+        .gallery .btn5 {
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 9px;
+            padding: 4px 1px;
+            border-radius: 15px;
+        }
+        .gallery .btn5:hover {
+            background-color: black;
+        }
+        .gallery .btn6 {
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 9px;
+            padding: 4px 1px;
+            border-radius: 15px;
+        }
+        .gallery .btn6:hover {
+            background-color: black;
+        }
+        .gallery .armenia img{
+            height: 191px;
+        }
+        .armentxt{
+            position: absolute;
+            bottom: 0.5px;
+            left: 665px;
+            color: white;
+            font-size: 18px;
+            padding: 7px;
+        
+        }
+        .gallery .armenia .btn7 {
+            position: absolute;
+            top: 97.8%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 9px;
+            padding: 4px 1px;
+            border-radius: 15px;
+        }
+        .gallery .armenia .btn7:hover {
+            background-color: black;
+        }
+        .gallery .armenia .btn8 {
+            position: absolute;
+            top: 97.8%;
+            left: 58.4%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 9px;
+            padding: 4px 2px;
+            border-radius: 15px;
+        }
+        .gallery .btn8:hover {
+            background-color: black;
+        }
+        .blogs .lp .latest{
+            height: 50%;
+            
+        }
+        .shortblogs{
+            margin-left: 2%;
+            height: 400px;
+            overflow: scroll;
+        }
+        .univ{
+            padding: 5px;
+        }
+        .univimg {
+            float: left;
+            width: 33.33%;
+            padding: 6px;
+        }
+        .univtxt{
+            padding: 1px;
+        }
+        .univ::after {
+            clear: both;
+            display: table;
+        }
+        .heir{
+            padding: 5px;
+        }
+        .heirimg {
+            float: left;
+            width: 33.33%; 
+            height: 20%;
+            padding: 10px;
+        }
+        .heirtxt{
+            padding: 2px;
+        }
+        .heir::after {
+            clear: both;
+            display: table;
+        }
+        .bulb{
+            padding: 5px;
+        }
+        .bulbimg {
+            float: left;
+            width: 33.33%; 
+            height: 20%;
+            padding: 10px;
+        }
+        .bulbtxt{
+            padding: 2px;
+        }
+        .bulb::after {
+            clear: both;
+            display: table;
+        }
+        .pyr{
+            padding: 5px;
+        }
+        .pyrimg {
+            float: left;
+            width: 33.33%; 
+            height: 20%;
+            padding: 10px;
+        }
+        .pyrtxt{
+            padding: 2px;
+        }
+        .pyr::after {
+            clear: both;
+            display: table;
+        }
+        .homo{
+            padding: 5px;
+        }
+        .homoimg {
+            float: left;
+            width: 33.33%; 
+            height: 20%;
+            padding: 10px;
+        }
+        .homotxt{
+            padding: 2px;
+        }
+        .homo::after {
+            clear: both;
+            display: table;
+        }
+        .pap{
+            padding: 5px;
+        }
+        .papimg {
+            float: left;
+            width: 33.33%; 
+            height: 20%;
+            padding: 10px;
+        }
+        .paptxt{
+            padding: 2px;
+        }
+        .pap::after {
+            clear: both;
+            display: table;
+        }
+
+
+
+    </style>
+
+    <body>
+        <div class="header">
+            <header>
+                <h1>
+                    TheNewsHive
+                </h1>
+            </header> 
+        </div>
+        <hr>
+        <div class="links">
+            <a href="#" style="color: black;font-size:20px;">HOME </a> |
+            <a href="#" style="color: black;font-size:20px;">NEWS </a> |
+            <a href="#" style="color: black;font-size:20px;">WORLD </a> |
+            <a href="#" style="color: black;font-size:20px;">POLITICS </a> |
+            <a href="#" style="color: black;font-size:20px;">ENTERTAINMENT </a> |
+            <a href="#" style="color: black;font-size:20px;">SPORTS </a>
+        </div>
+        <div class="header2">
+            <div>
+            <h3>BREAKING    NEWS</h3>
+            </div>
+        </div>
+        <br>
+        <div class="blogs" >
+            <div class="woman" id="womani" >
+                <button >
+                <img src="woman.jpg" alt="woman">
+                <div class="womantxt"><h3>India won the international award for the</h3> 
+                    <h3>best cultural country</h3></div>
+                </button>
+                <button class="btn"><b>Cultural</b></button>
+                <button class="btn2"><b>Featured</b></button>
+            </div>
+            <div class="vaulted">
+                <button style="background-color: white; border-color: white; ">
+                <img src="vaulted-cellar-247391_1280.jpg" alt="vaulted">
+                <div class="txt2"><h3>Lost texts from </h3>
+                    <h3>Mount Vesuvius </h3>
+                    <h3>eruption....</h3> 
+                </div>
+                </button>
+                <button class="btn3"><b>Featured</b></button>
+                <button class="btn4"><b>Historical</b></button>
+            </div>
+            <div class="gallery">
+                <button>
+                <img src="national-gallery-2533907_1280.jpg" alt="vaulted">
+                <div class="galtxt"><p><b>The London National</b></p>
+                    <p><b> Gallery celebrates </b></p>
+                    <p><b>200 years</b></p></div>
+                </button>
+                <button class="btn5"><b>Featured</b></button>
+                <button class="btn6"><b>Lifestyle</b></button>
+                <div class="armenia">
+                    <button>
+                    <img src="armenia-3718710_1280.jpg" alt="vaulted">
+                    <div class="armentxt"><p><b>Exploring the</b></p>
+                        <p><b> culinary heritage of </b></p>
+                        <p><b>  Armenia</b></p></div>
+                    </button>
+                    </button>
+                    <button class="btn7"><b>Featured</b></button>
+                    <button class="btn8"><b>Food</b></button>
+                </div>
+                
+            </div>
+            <div class="shortblogs">    
+                <button class="latest">
+                    LATEST
+                </button>
+                <button class="latest">
+                    POPULAR
+                </button>
+                <button style="background-color: white;border-color: white;">
+                <div class="univ">
+                    <div class="univimg">
+                        <img src="university-5188610_1280.jpg" alt="Snow" style="width:100%">
+                    </div>
+                    <div class="univtxt">
+                        <p><b>University students use technology to restore historic buildings in Hawaii</b></p>
+                    </div>
+                </div>
+                </button>
+
+                <button style="background-color: white;border-color: white;">
+                <div class="heir">
+                    <div class="heirimg">
+                        <img src="hieroglyph-7883891_128034.png" alt="Snow" style="width:100%">
+                    </div>
+                    <div class="heirtxt">
+                        <p><b>Gobekli Tepe reveals new 11,000-year-old finds</b></p>
+                    </div>
+                </div>
+                </button>
+
+                <button style="background-color: white;border-color: white;">
+                    <div class="bulb">
+                        <div class="bulbimg">
+                            <img src="light-bulb-5244001_1280.jpg" alt="Snow" style="width:100%">
+                        </div>
+                        <div class="bulbtxt">
+                            <p><b>Gobekli Tepe reveals new 11,000-year-old finds</b></p>
+                        </div>
+                    </div>
+                </button>
+                
+                <button style="background-color: white;border-color: white;">
+                    <div class="pyr">
+                        <div class="pyrimg">
+                            <img src="pyramids-3953368_1280.jpg" alt="Snow" style="width:100%">
+                        </div>
+                        <div class="pyrtxt">
+                            <p><b>Mysterious L-shaped structure discovered near Giza Pyramids</b></p>
+                        </div>
+                    </div>
+                </button>
+
+                <button style="background-color: white;border-color: white;">
+                    <div class="homo">
+                        <div class="homoimg">
+                            <img src="homo-erectus-2242425_1280.jpg" alt="Snow" style="width:100%">
+                        </div>
+                        <div class="homotxt">
+                            <p><b>New insights into Homo naledi burial practices</b></p>
+                        </div>
+                    </div>
+                </button>
+
+                <button style="background-color: white;border-color: white;">
+                    <div class="pap">
+                        <div class="papimg">
+                            <img src="papyrus-63004_1280.jpg" alt="Snow" style="width:100%">
+                        </div>
+                        <div class="paptxt">
+                            <p><b>New insights into Homo naledi burial practices</b></p>
+                        </div>
+                    </div>
+                </button>
+
+            </div>
+        </div>
+
+
+        <script src="WebDtask.js">
+        </script>
+        <script>
+            listposts('womani')
+        </script>
+    </body>
+
+</html>
